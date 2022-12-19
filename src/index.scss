@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap');
+
+:root {
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-green: hsl(172, 100%, 50%);
+
+  --clr-bg: hsl(0, 0%, 9%);
+  --clr-bg-light: hsl(0, 0%, 11%);
+  --clr-bg-dark: hsl(0, 0%, 0%);
+
+  --clr-text-primary: hsl(0, 0%, 100%);
+  --clr-text-secondary: hsl(0, 0%, 77%);
+  --clr-text-tertiary: hsl(0, 0%, 37%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--clr-bg);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--clr-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-transform: capitalize;
+  color: var(--clr-text-secondary);
+  transition: color 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--clr-green);
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+.sr-only {
+  opacity: 0;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.bio-desc {
+  display: relative;
+}
+
+.bio-desc::before {
+  display: absolute;
+  content: '';
+  animation: write-text 8s step-end forwards;
+  transition: content 2ms ease-out;
+}
+
+.bio-desc::after {
+  content: '|';
+  animation: blink-cursor 900ms infinite 8s;
+}
+
+$sentence: (
+  '',
+  'I',
+  "I'",
+  "I'm",
+  "I'm ",
+  "I'm a",
+  "I'm a ",
+  "I'm a F",
+  "I'm a Fy",
+  "I'm a F",
+  "I'm a Fu",
+  "I'm a Ful",
+  "I'm a Full",
+  "I'm a Full ",
+  "I'm a Full S",
+  "I'm a Full St",
+  "I'm a Full Sta",
+  "I'm a Full Stac",
+  "I'm a Full Stacl",
+  "I'm a Full Stac",
+  "I'm a Full Stack",
+  "I'm a Full Stack ",
+  "I'm a Full Stack W",
+  "I'm a Full Stack We",
+  "I'm a Full Stack Web",
+  "I'm a Full Stack WebD",
+  "I'm a Full Stack Web",
+  "I'm a Full Stack Web ",
+  "I'm a Full Stack Web D",
+  "I'm a Full Stack Web De",
+  "I'm a Full Stack Web Dev",
+  "I'm a Full Stack Web Deve",
+  "I'm a Full Stack Web Deve",
+  "I'm a Full Stack Web Devel",
+  "I'm a Full Stack Web Develo",
+  "I'm a Full Stack Web Develop",
+  "I'm a Full Stack Web Develope",
+  "I'm a Full Stack Web Developer",
+  "I'm a Full Stack Web Developer ",
+  "I'm a Full Stack Web Developer b",
+  "I'm a Full Stack Web Developer ba",
+  "I'm a Full Stack Web Developer bas",
+  "I'm a Full Stack Web Developer base",
+  "I'm a Full Stack Web Developer based",
+  "I'm a Full Stack Web Developer based ",
+  "I'm a Full Stack Web Developer based i",
+  "I'm a Full Stack Web Developer based in",
+  "I'm a Full Stack Web Developer based in ",
+  "I'm a Full Stack Web Developer based in K",
+  "I'm a Full Stack Web Developer based in Ka",
+  "I'm a Full Stack Web Developer based in Kad",
+  "I'm a Full Stack Web Developer based in Kadu",
+  "I'm a Full Stack Web Developer based in Kadun",
+  "I'm a Full Stack Web Developer based in Kaduna",
+  "I'm a Full Stack Web Developer based in Kaduna,",
+  "I'm a Full Stack Web Developer based in Kaduna, ",
+  "I'm a Full Stack Web Developer based in Kaduna, N",
+  "I'm a Full Stack Web Developer based in Kaduna, Ni",
+  "I'm a Full Stack Web Developer based in Kaduna, Nig",
+  "I'm a Full Stack Web Developer based in Kaduna, Nige",
+  "I'm a Full Stack Web Developer based in Kaduna, Niger",
+  "I'm a Full Stack Web Developer based in Kaduna, Nigeri",
+  "I'm a Full Stack Web Developer based in Kaduna, Nigeria",
+  "I'm a Full Stack Web Developer based in Kaduna, Nigeria."
+);
+
+@keyframes write-text {
+  @for $i from 0 to length($sentence) {
+    $percentage: calc($i / length($sentence));
+    $keyframe: percentage($percentage);
+    #{$keyframe} {
+      content: quote(nth($sentence, $i + 1));
+    }
+  }
+
+  100% {
+    content: quote(nth($sentence, length($sentence)));
+  }
+}
+
+@keyframes blink-cursor {
+  to {
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: 'Herbarium';
+  src: url('fonts/HerbariumRegular.woff2') format('woff2'),
+    url('fonts/HerbariumRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

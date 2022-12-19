@@ -1,0 +1,440 @@
+.about {
+  position: relative;
+  flex-direction: column;
+  width: calc(100vw - 130px);
+  height: 100vh;
+  margin-left: 130px;
+  padding-block: 20vh;
+  padding-inline: clamp(3rem, 4vw, 5rem);
+  gap: 2rem;
+}
+
+.important {
+  color: var(--clr-green);
+  font-family: "Herbarium";
+  font-weight: bold;
+  font-style: normal;
+}
+
+.name-container {
+  width: 100%;
+}
+
+.name {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 7rem);
+  line-height: 0.8em;
+  margin-bottom: 0;
+}
+
+.subscript {
+  font-size: clamp(0.6rem, 1vw, 3rem);
+  color: var(--clr-text-tertiary);
+  font-family: cursive;
+  font-style: italic;
+  margin-top: 1em;
+}
+
+.bio {
+  font-size: clamp(0.6rem, 1.3vw, 3rem);
+  color: var(--clr-text-secondary);
+  margin-top: 1em;
+  line-height: 1.2em;
+  width: clamp(30em, 55vw, 40em);
+}
+
+.icons > svg {
+  opacity: 0;
+  -webkit-animation: fade-in 300ms ease-out forwards;
+          animation: fade-in 300ms ease-out forwards;
+  color: var(--clr-text-tertiary);
+  font-size: clamp(3rem, 4vw, 6rem);
+}
+
+.icons > svg:nth-child(1) {
+  position: absolute;
+  top: 80vh;
+  bottom: 83vh;
+  right: 15vw;
+  left: 58vw;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  z-index: -1000;
+}
+
+.icons > svg:nth-child(2) {
+  position: absolute;
+  top: 18vh;
+  bottom: 7vh;
+  right: 9vw;
+  left: 38vw;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  z-index: -1000;
+}
+
+.icons > svg:nth-child(3) {
+  position: absolute;
+  top: 87vh;
+  bottom: 22vh;
+  right: 47vw;
+  left: 78vw;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  z-index: -1000;
+}
+
+.icons > svg:nth-child(4) {
+  position: absolute;
+  top: 64vh;
+  bottom: 11vh;
+  right: 26vw;
+  left: 54vw;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  z-index: -1000;
+}
+
+.icons > svg:nth-child(5) {
+  position: absolute;
+  top: 60vh;
+  bottom: 31vh;
+  right: 54vw;
+  left: 12vw;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  z-index: -1000;
+}
+
+.icons > svg:nth-child(6) {
+  position: absolute;
+  top: 38vh;
+  bottom: 79vh;
+  right: 67vw;
+  left: 71vw;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+  z-index: -1000;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.first-image {
+  width: 50%;
+}
+
+.hover-text,
+.scroll-icon {
+  position: absolute;
+  color: var(--clr-text-tertiary);
+}
+
+.hover-text {
+  top: 30%;
+  right: 10em;
+  transform: rotateZ(6deg);
+}
+
+.hover-text::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-animation: write-text 5s step-end forwards;
+          animation: write-text 5s step-end forwards;
+}
+
+.scroll-icon {
+  bottom: 5rem;
+  left: 50%;
+  color: var(--clr-green);
+  font-size: 4em;
+  font-weight: 400;
+  border: 3px solid var(--clr-green);
+  border-radius: 50%;
+  padding: 0.1em;
+  -webkit-animation: bounce 1s ease-out infinite;
+          animation: bounce 1s ease-out infinite;
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 0.3;
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes write-text {
+  0% {
+    content: "H";
+  }
+  3.2258064516% {
+    content: "Ho";
+  }
+  6.4516129032% {
+    content: "Hov";
+  }
+  9.6774193548% {
+    content: "Hove";
+  }
+  12.9032258065% {
+    content: "Hover";
+  }
+  16.1290322581% {
+    content: "Hover ";
+  }
+  19.3548387097% {
+    content: "Hover o";
+  }
+  22.5806451613% {
+    content: "Hover ov";
+  }
+  25.8064516129% {
+    content: "Hover ove";
+  }
+  29.0322580645% {
+    content: "Hover over";
+  }
+  32.2580645161% {
+    content: "Hover over ";
+  }
+  35.4838709677% {
+    content: "Hover over m";
+  }
+  38.7096774194% {
+    content: "Hover over my";
+  }
+  41.935483871% {
+    content: "Hover over my ";
+  }
+  45.1612903226% {
+    content: "Hover over my n";
+  }
+  48.3870967742% {
+    content: "Hover over my na";
+  }
+  51.6129032258% {
+    content: "Hover over my nam";
+  }
+  54.8387096774% {
+    content: "Hover over my name";
+  }
+  58.064516129% {
+    content: "Hover over my name ";
+  }
+  61.2903225806% {
+    content: "Hover over my name t";
+  }
+  64.5161290323% {
+    content: "Hover over my name to";
+  }
+  67.7419354839% {
+    content: "Hover over my name to ";
+  }
+  70.9677419355% {
+    content: "Hover over my name to s";
+  }
+  74.1935483871% {
+    content: "Hover over my name to se";
+  }
+  77.4193548387% {
+    content: "Hover over my name to see";
+  }
+  80.6451612903% {
+    content: "Hover over my name to see ";
+  }
+  83.8709677419% {
+    content: "Hover over my name to see m";
+  }
+  87.0967741935% {
+    content: "Hover over my name to see me";
+  }
+  90.3225806452% {
+    content: "Hover over my name to see me ";
+  }
+  93.5483870968% {
+    content: "Hover over my name to see me :";
+  }
+  96.7741935484% {
+    content: "Hover over my name to see me :)";
+  }
+  100% {
+    content: "Hover over my name to see me :)";
+  }
+}
+@keyframes write-text {
+  0% {
+    content: "H";
+  }
+  3.2258064516% {
+    content: "Ho";
+  }
+  6.4516129032% {
+    content: "Hov";
+  }
+  9.6774193548% {
+    content: "Hove";
+  }
+  12.9032258065% {
+    content: "Hover";
+  }
+  16.1290322581% {
+    content: "Hover ";
+  }
+  19.3548387097% {
+    content: "Hover o";
+  }
+  22.5806451613% {
+    content: "Hover ov";
+  }
+  25.8064516129% {
+    content: "Hover ove";
+  }
+  29.0322580645% {
+    content: "Hover over";
+  }
+  32.2580645161% {
+    content: "Hover over ";
+  }
+  35.4838709677% {
+    content: "Hover over m";
+  }
+  38.7096774194% {
+    content: "Hover over my";
+  }
+  41.935483871% {
+    content: "Hover over my ";
+  }
+  45.1612903226% {
+    content: "Hover over my n";
+  }
+  48.3870967742% {
+    content: "Hover over my na";
+  }
+  51.6129032258% {
+    content: "Hover over my nam";
+  }
+  54.8387096774% {
+    content: "Hover over my name";
+  }
+  58.064516129% {
+    content: "Hover over my name ";
+  }
+  61.2903225806% {
+    content: "Hover over my name t";
+  }
+  64.5161290323% {
+    content: "Hover over my name to";
+  }
+  67.7419354839% {
+    content: "Hover over my name to ";
+  }
+  70.9677419355% {
+    content: "Hover over my name to s";
+  }
+  74.1935483871% {
+    content: "Hover over my name to se";
+  }
+  77.4193548387% {
+    content: "Hover over my name to see";
+  }
+  80.6451612903% {
+    content: "Hover over my name to see ";
+  }
+  83.8709677419% {
+    content: "Hover over my name to see m";
+  }
+  87.0967741935% {
+    content: "Hover over my name to see me";
+  }
+  90.3225806452% {
+    content: "Hover over my name to see me ";
+  }
+  93.5483870968% {
+    content: "Hover over my name to see me :";
+  }
+  96.7741935484% {
+    content: "Hover over my name to see me :)";
+  }
+  100% {
+    content: "Hover over my name to see me :)";
+  }
+}
+@media (max-width: 81rem) {
+  .about {
+    width: 100%;
+    margin: 0;
+    padding-inline: clamp(2em, 10vw, 5em);
+  }
+}
+@media (min-width: 800px) {
+  .about {
+    flex-direction: row;
+    padding-inline: 2em;
+  }
+  .images {
+    width: auto;
+  }
+  .bio {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) and (hover: hover) {
+  .first-image {
+    display: none;
+  }
+  .letter-name {
+    position: relative;
+  }
+  .letter-name:hover::before {
+    content: url(../../public/placeholder-small.svg);
+    pointer-events: none;
+    position: absolute;
+    top: -15vw;
+    z-index: -20;
+  }
+  .bio-container {
+    width: clamp(30em, 60vw, 70%);
+  }
+}
+@media (min-width: 800px) and (hover: none) {
+  .images {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .first-image {
+    width: 100% !important;
+    aspect-ratio: 1;
+  }
+  .bio-container {
+    width: clamp(30em, 50vw, 90%);
+  }
+}/*# sourceMappingURL=about.css.map */

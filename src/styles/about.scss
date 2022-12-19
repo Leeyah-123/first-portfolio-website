@@ -1,0 +1,237 @@
+@use 'sass:math';
+@use 'sass:string';
+
+.about {
+  position: relative;
+  flex-direction: column;
+  width: calc(100vw - 130px);
+  height: 100vh;
+  margin-left: 130px;
+  padding-block: 20vh;
+  padding-inline: clamp(3rem, 4vw, 5rem);
+  gap: 2rem;
+}
+
+.important {
+  color: var(--clr-green);
+
+  font-family: 'Herbarium';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.name-container {
+  width: 100%;
+}
+
+.name {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 7rem);
+  line-height: 0.8em;
+  margin-bottom: 0;
+}
+
+.subscript {
+  font-size: clamp(0.6rem, 1vw, 3rem);
+  color: var(--clr-text-tertiary);
+  font-family: cursive;
+  font-style: italic;
+  margin-top: 1em;
+}
+
+.bio {
+  font-size: clamp(0.6rem, 1.3vw, 3rem);
+  color: var(--clr-text-secondary);
+  margin-top: 1em;
+  line-height: 1.2em;
+  width: clamp(30em, 55vw, 40em);
+}
+
+.icons > svg {
+  opacity: 0;
+  animation: fade-in 300ms ease-out forwards;
+  color: var(--clr-text-tertiary);
+  font-size: clamp(3rem, 4vw, 6rem);
+}
+
+@for $i from 0 to 6 {
+  .icons > svg:nth-child(#{$i + 1}) {
+    position: absolute;
+    top: string.unquote(math.ceil(math.random(90)) + vh);
+    bottom: string.unquote(math.ceil(math.random(90)) + vh);
+    right: string.unquote(math.ceil(math.random(80)) + vw);
+    left: string.unquote(math.ceil(math.random(80)) + vw);
+    animation-delay: #{$i + 2} + 's';
+    z-index: -1000;
+  }
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.first-image {
+  width: 50%;
+}
+
+.hover-text,
+.scroll-icon {
+  position: absolute;
+  color: var(--clr-text-tertiary);
+}
+
+.hover-text {
+  top: 30%;
+  right: 10em;
+  transform: rotateZ(6deg);
+}
+
+.hover-text::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: max-content;
+  animation: write-text 5s step-end forwards;
+}
+
+.scroll-icon {
+  bottom: 5rem;
+  left: 50%;
+  color: var(--clr-green);
+  font-size: 4em;
+  font-weight: 400;
+  border: 3px solid var(--clr-green);
+  border-radius: 50%;
+  padding: 0.1em;
+  animation: bounce 1s ease-out infinite;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+$sentence: (
+  'H',
+  'Ho',
+  'Hov',
+  'Hove',
+  'Hover',
+  'Hover ',
+  'Hover o',
+  'Hover ov',
+  'Hover ove',
+  'Hover over',
+  'Hover over ',
+  'Hover over m',
+  'Hover over my',
+  'Hover over my ',
+  'Hover over my n',
+  'Hover over my na',
+  'Hover over my nam',
+  'Hover over my name',
+  'Hover over my name ',
+  'Hover over my name t',
+  'Hover over my name to',
+  'Hover over my name to ',
+  'Hover over my name to s',
+  'Hover over my name to se',
+  'Hover over my name to see',
+  'Hover over my name to see ',
+  'Hover over my name to see m',
+  'Hover over my name to see me',
+  'Hover over my name to see me ',
+  'Hover over my name to see me :',
+  'Hover over my name to see me :)'
+);
+
+@keyframes write-text {
+  @for $i from 0 to length($sentence) {
+    $percentage: calc($i / length($sentence));
+    $keyframe: percentage($percentage);
+    #{$keyframe} {
+      content: quote(nth($sentence, $i + 1));
+    }
+  }
+
+  100% {
+    content: quote(nth($sentence, length($sentence)));
+  }
+}
+
+@media (max-width: 81rem) {
+  .about {
+    // max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding-inline: clamp(2em, 10vw, 5em);
+  }
+}
+
+@media (min-width: 800px) {
+  .about {
+    flex-direction: row;
+    padding-inline: 2em;
+  }
+
+  .images {
+    width: auto;
+  }
+
+  .bio {
+    width: 100%;
+  }
+
+  @media (hover: hover) {
+    .first-image {
+      display: none;
+    }
+
+    .letter-name {
+      position: relative;
+    }
+
+    .letter-name:hover::before {
+      content: url(../../public/placeholder-small.svg);
+      pointer-events: none;
+      position: absolute;
+      top: -15vw;
+      z-index: -20;
+    }
+
+    .bio-container {
+      width: clamp(30em, 60vw, 70%);
+    }
+  }
+
+  @media (hover: none) {
+    .images {
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .first-image {
+      width: 100% !important;
+      aspect-ratio: 1;
+    }
+
+    .bio-container {
+      width: clamp(30em, 50vw, 90%);
+    }
+  }
+}
