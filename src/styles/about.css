@@ -54,10 +54,10 @@
 
 .icons > svg:nth-child(1) {
   position: absolute;
-  top: 80vh;
-  bottom: 83vh;
-  right: 15vw;
-  left: 58vw;
+  top: 45vh;
+  bottom: 58vh;
+  right: 54vw;
+  left: 77vw;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   z-index: -1000;
@@ -65,10 +65,10 @@
 
 .icons > svg:nth-child(2) {
   position: absolute;
-  top: 18vh;
-  bottom: 7vh;
-  right: 9vw;
-  left: 38vw;
+  top: 64vh;
+  bottom: 43vh;
+  right: 2vw;
+  left: 1vw;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   z-index: -1000;
@@ -76,10 +76,10 @@
 
 .icons > svg:nth-child(3) {
   position: absolute;
-  top: 87vh;
-  bottom: 22vh;
-  right: 47vw;
-  left: 78vw;
+  top: 22vh;
+  bottom: 16vh;
+  right: 58vw;
+  left: 52vw;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   z-index: -1000;
@@ -87,10 +87,10 @@
 
 .icons > svg:nth-child(4) {
   position: absolute;
-  top: 64vh;
-  bottom: 11vh;
-  right: 26vw;
-  left: 54vw;
+  top: 20vh;
+  bottom: 68vh;
+  right: 60vw;
+  left: 38vw;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
   z-index: -1000;
@@ -98,10 +98,10 @@
 
 .icons > svg:nth-child(5) {
   position: absolute;
-  top: 60vh;
-  bottom: 31vh;
-  right: 54vw;
-  left: 12vw;
+  top: 50vh;
+  bottom: 6vh;
+  right: 14vw;
+  left: 27vw;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   z-index: -1000;
@@ -109,10 +109,10 @@
 
 .icons > svg:nth-child(6) {
   position: absolute;
-  top: 38vh;
-  bottom: 79vh;
-  right: 67vw;
-  left: 71vw;
+  top: 16vh;
+  bottom: 22vh;
+  right: 44vw;
+  left: 55vw;
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
   z-index: -1000;
@@ -139,6 +139,7 @@
   top: 30%;
   right: 10em;
   transform: rotateZ(6deg);
+  display: none;
 }
 
 .hover-text::before {
@@ -153,10 +154,10 @@
 }
 
 .scroll-icon {
-  bottom: 5rem;
-  left: 50%;
+  bottom: 1em;
+  right: 1em;
   color: var(--clr-green);
-  font-size: 4em;
+  font-size: 8vh;
   font-weight: 400;
   border: 3px solid var(--clr-green);
   border-radius: 50%;
@@ -406,6 +407,9 @@
   .bio {
     width: 100%;
   }
+  .scroll-icon {
+    left: 50%;
+  }
 }
 @media (min-width: 800px) and (hover: hover) {
   .first-image {
@@ -423,6 +427,9 @@
   }
   .bio-container {
     width: clamp(30em, 60vw, 70%);
+  }
+  .hover-text {
+    display: block;
   }
 }
 @media (min-width: 800px) and (hover: none) {

@@ -1,0 +1,50 @@
+.skills {
+  position: relative;
+  flex-direction: column;
+  width: calc(100vw - 130px);
+  min-width: 100%;
+  min-height: 100vh;
+  margin-left: 130px;
+  padding-block: 20vh;
+  padding-inline: clamp(3rem, 4vw, 5rem);
+  gap: 2rem;
+}
+
+.subheading {
+  color: var(--clr-text-secondary);
+}
+
+.subheading > a {
+  color: var(--clr-green);
+}
+
+.subheading > a:hover,
+.subheading > a:focus {
+  opacity: 0.6;
+}
+
+.heading {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 7rem);
+  line-height: 0.8em;
+  margin-bottom: 0.8em;
+  transition: color 400ms ease-out;
+}
+
+.heading > span:hover {
+  color: var(--clr-green);
+}
+
+@media (max-width: 81rem) {
+  .skills {
+    width: 100%;
+    margin: 0;
+    padding-inline: clamp(2em, 10vw, 5em);
+  }
+}
+@media (min-width: 800px) {
+  .skills {
+    padding-inline: 2em;
+  }
+}/*# sourceMappingURL=skills.css.map */

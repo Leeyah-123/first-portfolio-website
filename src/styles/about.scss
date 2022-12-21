@@ -88,6 +88,7 @@
   top: 30%;
   right: 10em;
   transform: rotateZ(6deg);
+  display: none;
 }
 
 .hover-text::before {
@@ -99,10 +100,10 @@
 }
 
 .scroll-icon {
-  bottom: 5rem;
-  left: 50%;
+  bottom: 1em;
+  right: 1em;
   color: var(--clr-green);
-  font-size: 4em;
+  font-size: 8vh;
   font-weight: 400;
   border: 3px solid var(--clr-green);
   border-radius: 50%;
@@ -197,6 +198,10 @@ $sentence: (
     width: 100%;
   }
 
+  .scroll-icon {
+    left: 50%;
+  }
+
   @media (hover: hover) {
     .first-image {
       display: none;
@@ -216,6 +221,10 @@ $sentence: (
 
     .bio-container {
       width: clamp(30em, 60vw, 70%);
+    }
+
+    .hover-text {
+      display: block;
     }
   }
 

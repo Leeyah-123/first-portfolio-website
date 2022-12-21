@@ -54,16 +54,16 @@ function Header() {
             className="primary-navigation flex"
           >
             <li className="active">
-              <a href="index.html"> About </a>
+              <a href="#about"> About </a>
             </li>
             <li>
-              <a href="index.html">Work</a>
+              <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="index.html">My Skills</a>
+              <a href="#skills">My Skills</a>
             </li>
             <li>
-              <a href="index.html">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
