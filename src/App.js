@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import About from './components/About';
 import Contact from './components/Contact';
 import Header from './components/Header';
@@ -8,21 +8,25 @@ import Skills from './components/Skills';
 
 function App() {
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    window.addEventListener('load', () => {
-      setLoading(false);
-    });
+  // useEffect(() => {
+  //   window.addEventListener('load', () => {
+  //     setLoading(false);
+  //   });
 
-    // return () => {
-    //   window.removeEventListener(
-    //     'load',
-    //     () => {
-    //       setLoading(false);
-    //     },
-    //     { capture: 'false' }
-    //   );
-    // };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener(
+  //       'load',
+  //       () => {
+  //         setLoading(false);
+  //       },
+  //       { capture: 'false' }
+  //     );
+  //   };
+  // }, []);
+
+  window.addEventListener('load', () => {
+    setLoading(false);
+  });
 
   let resizeTimer;
   window.addEventListener('resize', () => {
