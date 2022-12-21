@@ -70,7 +70,7 @@ function Skills() {
             <li>ReactJS</li>
             <li>NuxtJS</li>
             <li>NextJS</li>
-            <li>NodeJS & Express</li>
+            <li>NodeJS</li>
             <li>Express</li>
             <li>NestJS</li>
           </ul>
