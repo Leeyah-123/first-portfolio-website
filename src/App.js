@@ -17,15 +17,15 @@ function App() {
       { capture: 'false' }
     );
 
-    return () => {
-      window.removeEventListener(
-        'load',
-        () => {
-          setLoading(false);
-        },
-        { capture: 'false' }
-      );
-    };
+    // return () => {
+    //   window.removeEventListener(
+    //     'load',
+    //     () => {
+    //       setLoading(false);
+    //     },
+    //     { capture: 'false' }
+    //   );
+    // };
   }, []);
 
   let resizeTimer;
