@@ -9,13 +9,9 @@ import Skills from './components/Skills';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    window.addEventListener(
-      'load',
-      () => {
-        setLoading(false);
-      },
-      { capture: 'false' }
-    );
+    window.addEventListener('load', () => {
+      setLoading(false);
+    });
 
     // return () => {
     //   window.removeEventListener(
