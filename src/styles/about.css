@@ -1,9 +1,9 @@
 .about {
   position: relative;
   flex-direction: column;
-  width: calc(100vw - 130px);
+  width: calc(100vw - 135px);
   height: 100vh;
-  margin-left: 130px;
+  margin-left: 135px;
   padding-block: 20vh;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
@@ -54,10 +54,10 @@
 
 .icons > svg:nth-child(1) {
   position: absolute;
-  top: 45vh;
-  bottom: 58vh;
-  right: 54vw;
-  left: 77vw;
+  top: 77vh;
+  bottom: 1vh;
+  right: 46vw;
+  left: 79vw;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   z-index: -1000;
@@ -65,10 +65,10 @@
 
 .icons > svg:nth-child(2) {
   position: absolute;
-  top: 64vh;
-  bottom: 43vh;
-  right: 2vw;
-  left: 1vw;
+  top: 19vh;
+  bottom: 29vh;
+  right: 68vw;
+  left: 32vw;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   z-index: -1000;
@@ -76,10 +76,10 @@
 
 .icons > svg:nth-child(3) {
   position: absolute;
-  top: 22vh;
-  bottom: 16vh;
-  right: 58vw;
-  left: 52vw;
+  top: 29vh;
+  bottom: 30vh;
+  right: 20vw;
+  left: 73vw;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   z-index: -1000;
@@ -87,10 +87,10 @@
 
 .icons > svg:nth-child(4) {
   position: absolute;
-  top: 20vh;
-  bottom: 68vh;
-  right: 60vw;
-  left: 38vw;
+  top: 31vh;
+  bottom: 33vh;
+  right: 38vw;
+  left: 61vw;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
   z-index: -1000;
@@ -98,10 +98,10 @@
 
 .icons > svg:nth-child(5) {
   position: absolute;
-  top: 50vh;
-  bottom: 6vh;
-  right: 14vw;
-  left: 27vw;
+  top: 30vh;
+  bottom: 12vh;
+  right: 1vw;
+  left: 58vw;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   z-index: -1000;
@@ -109,10 +109,10 @@
 
 .icons > svg:nth-child(6) {
   position: absolute;
-  top: 16vh;
-  bottom: 22vh;
-  right: 44vw;
-  left: 55vw;
+  top: 87vh;
+  bottom: 67vh;
+  right: 67vw;
+  left: 13vw;
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
   z-index: -1000;

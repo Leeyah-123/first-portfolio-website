@@ -5,10 +5,10 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  width: calc(100vw - 130px);
+  width: calc(100vw - 135px);
   min-height: 50vh;
   padding-block: 10vh;
-  margin-left: 130px;
+  margin-left: 135px;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
