@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import About from './components/About';
+import Contact from './components/Contact';
 import Header from './components/Header';
 import Preloader from './components/Preloader';
 import Projects from './components/Projects';
@@ -49,6 +50,7 @@ function App() {
             <About />
             <Projects />
             <Skills />
+            <Contact />
           </main>
         </>
       )}
