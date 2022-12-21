@@ -36,7 +36,7 @@ function Projects() {
             alt="</p>"
           />
         </div>
-        <div className="gallery flex">
+        <div className="gallery">
           <div className="project">
             <img
               src="./project-placeholder.jpg"

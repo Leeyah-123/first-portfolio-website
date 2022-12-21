@@ -5,16 +5,22 @@
   position: relative;
   flex-direction: column;
   width: calc(100vw - 130px);
-  min-width: 100%;
   min-height: 100vh;
   margin-left: 130px;
-  padding-block: 20vh;
+  padding-block: 10vh;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
 
+.text-container {
+  width: clamp(18em, 50vw, 70%);
+}
+
 .subheading {
   color: var(--clr-text-secondary);
+  font-size: clamp(0.6rem, 1.3vw, 3rem);
+  width: 100%;
+  transition: color 0.5s ease-out;
 }
 
 .subheading > a {
@@ -31,12 +37,49 @@
   font-weight: 400;
   font-size: clamp(2rem, 5vw, 7rem);
   line-height: 0.8em;
-  margin-bottom: 0.8em;
+}
+
+.heading > span {
   transition: color 400ms ease-out;
 }
 
 .heading > span:hover {
   color: var(--clr-green);
+}
+
+.green-text {
+  color: var(--clr-green);
+}
+
+.stack {
+  list-style: none;
+  counter-set: stack-counter 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  font-size: clamp(0.5rem, 1vw, 3rem);
+}
+
+.stack li {
+  color: var(--clr-text-secondary);
+  counter-increment: stack-counter 1;
+  margin-block: 0.2em;
+}
+
+.stack li::before {
+  content: counter(stack-counter) ')';
+  margin-right: 1em;
+  color: var(--clr-green);
+  font-size: clamp(0.5rem, 1vw, 23em);
+  border-radius: 50%;
+}
+
+.skill-icons {
+  display: none;
+}
+
+.skill-icons > * {
+  color: var(--clr-text-secondary);
+  font-size: clamp(5rem, 7vw, 6rem);
 }
 
 @media (max-width: 81rem) {
@@ -50,5 +93,13 @@
 @media (min-width: 800px) {
   .skills {
     padding-inline: 2em;
+    flex-direction: row;
+  }
+  .skill-icons {
+    height: 100%;
+    display: grid;
+    padding: 9em;
+    gap: 1.5em;
+    grid-template-columns: repeat(3, minmax(20px, 1fr));
   }
 }

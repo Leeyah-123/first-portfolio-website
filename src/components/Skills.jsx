@@ -1,4 +1,13 @@
 import React from 'react';
+import { DiPostgresql } from 'react-icons/di';
+import { FaNode, FaReact, FaVuejs } from 'react-icons/fa';
+import {
+  SiExpress,
+  SiNestjs,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiTailwindcss,
+} from 'react-icons/si';
 
 import '../styles/skills.css';
 
@@ -37,17 +46,46 @@ function Skills() {
           />
           <img className="html-open-element" src="./p.png" alt="<p>" />
           <p className="subheading">
-            A small gallery of some of my work. If you want to see all but also
-            older work, check out{' '}
-            <a href="https://github.com/Leeyah-123">My github</a>.
+            I am currently learning{' '}
+            <span className="green-text">Software Engineering</span> at{' '}
+            <span className="green-text">
+              National Institute of Information and Technology
+            </span>{' '}
+            (NIIT), where I've gained a strong foundation in programming
+            languages such as Java and Python. I have completed several personal
+            and course projects, and hence developed my skills in both front-end
+            and back-end development. I have hands-on experience in Web
+            Development using latest technologies and best practices. Here are
+            some of the technologies I've been working with recently:
           </p>
           <img
             className="html-closing-element"
             src="./p-close.png"
             alt="</p>"
           />
+          <ul className="stack">
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>VueJS</li>
+            <li>ReactJS</li>
+            <li>NuxtJS</li>
+            <li>NextJS</li>
+            <li>NodeJS & Express</li>
+            <li>Express</li>
+            <li>NestJS</li>
+          </ul>
         </div>
-        <div className="gallery flex"></div>
+        <div className="skill-icons">
+          <FaVuejs />
+          <FaReact />
+          <FaNode />
+          <DiPostgresql />
+          <SiTailwindcss />
+          <SiNextdotjs />
+          <SiNuxtdotjs />
+          <SiExpress />
+          <SiNestjs />
+        </div>
       </div>
     </section>
   );

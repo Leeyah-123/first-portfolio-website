@@ -3,6 +3,7 @@ import About from './components/About';
 import Header from './components/Header';
 import Preloader from './components/Preloader';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -47,7 +48,7 @@ function App() {
           <main>
             <About />
             <Projects />
-            {/* <Skills /> */}
+            <Skills />
           </main>
         </>
       )}

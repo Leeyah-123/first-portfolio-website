@@ -67,7 +67,7 @@ code {
 a {
   text-transform: capitalize;
   color: var(--clr-text-secondary);
-  transition: color 0.3s;
+  transition: color 0.5s ease-out;
   text-decoration: none;
   cursor: pointer;
 }
