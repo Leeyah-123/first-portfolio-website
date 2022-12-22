@@ -2,9 +2,8 @@
   position: relative;
   flex-direction: column;
   width: calc(100vw - 135px);
-  min-height: 100vh;
   margin-left: 130px;
-  padding-block: 10vh;
+  padding-block: 5vh;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
@@ -22,6 +21,7 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  max-width: 40vh;
 }
 
 .projects .heading {
@@ -96,8 +96,8 @@
   display: block;
   -webkit-margin-before: 1em;
           margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
   -webkit-margin-end: 0px;
@@ -105,13 +105,12 @@
 }
 
 .project-demo-button {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 1em;
   color: var(--clr-bg-dark);
   font-size: 18px;
   background-color: hsl(0deg, 0%, 94%);
   width: 50px;
-  height: 50px;
   border-radius: 50%;
   padding: 0.5em;
 }
@@ -132,5 +131,7 @@
 @media (min-width: 800px) {
   .projects {
     padding-inline: 2em;
+    padding-block: 10vh;
+    min-height: 100vh;
   }
 }/*# sourceMappingURL=projects.css.map */

@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdOutlineOpenInNew } from 'react-icons/md';
 
 import '../styles/projects.css';
 
 function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(
+          'https://portfolio-backend-6gx0.onrender.com/projects'
+        );
+
+        let projects = await response.json();
+        setProjects(projects);
+      } catch (err) {
+        console.log('Error', err);
+      }
+    }
+    fetchData();
+  }, []);
+
   return (
     <section id="projects">
       <div className="projects flex">
@@ -37,102 +55,35 @@ function Projects() {
           />
         </div>
         <div className="gallery">
-          <div className="project">
-            <img
-              src="./project-placeholder.jpg"
-              alt="First project"
-              className="project-image"
-            />
-            <div className="project-description">
-              <h3 className="project-title">First Project</h3>
-              <p className="project-short-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <a href="/" className="project-demo-button">
-                <MdOutlineOpenInNew />
-              </a>
+          {projects.length > 0 ? (
+            projects.map((project) => {
+              return (
+                <div className="project" key={project.project_id}>
+                  <img
+                    src={project.project_image_url}
+                    alt={project.project_title}
+                    className="project-image"
+                  />
+                  <div className="project-description">
+                    <h3 className="project-title">{project.project_title}</h3>
+                    <p className="project-short-desc">
+                      {project.project_subtitle}
+                    </p>
+                    <a
+                      href={project.project_github_link}
+                      className="project-demo-button"
+                    >
+                      <MdOutlineOpenInNew />
+                    </a>
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <div className="no-project">
+              <p>No project found</p>
             </div>
-          </div>
-          <div className="project">
-            <img
-              src="./project-placeholder.jpg"
-              alt="Second project"
-              className="project-image"
-            />
-            <div className="project-description">
-              <h3 className="project-title">Second Project</h3>
-              <p className="project-short-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <a href="/" className="project-demo-button">
-                <MdOutlineOpenInNew />
-              </a>
-            </div>
-          </div>
-          <div className="project">
-            <img
-              src="./project-placeholder.jpg"
-              alt="Third project"
-              className="project-image"
-            />
-            <div className="project-description">
-              <h3 className="project-title">Third Project</h3>
-              <p className="project-short-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <a href="/" className="project-demo-button">
-                <MdOutlineOpenInNew />
-              </a>
-            </div>
-          </div>
-          <div className="project">
-            <img
-              src="./project-placeholder.jpg"
-              alt="Fourth project"
-              className="project-image"
-            />
-            <div className="project-description">
-              <h3 className="project-title">Fourth Project</h3>
-              <p className="project-short-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <a href="/" className="project-demo-button">
-                <MdOutlineOpenInNew />
-              </a>
-            </div>
-          </div>
-          <div className="project">
-            <img
-              src="./project-placeholder.jpg"
-              alt="Fifth project"
-              className="project-image"
-            />
-            <div className="project-description">
-              <h3 className="project-title">Fifth project</h3>
-              <p className="project-short-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <a href="/" className="project-demo-button">
-                <MdOutlineOpenInNew />
-              </a>
-            </div>
-          </div>
-          <div className="project">
-            <img
-              src="./project-placeholder.jpg"
-              alt="Sixth project"
-              className="project-image"
-            />
-            <div className="project-description">
-              <h3 className="project-title">Sixth project</h3>
-              <p className="project-short-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <a href="/" className="project-demo-button">
-                <MdOutlineOpenInNew />
-              </a>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

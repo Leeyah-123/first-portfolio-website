@@ -54,10 +54,10 @@
 
 .about .icons > svg:nth-child(1) {
   position: absolute;
-  top: 58vh;
-  bottom: 7vh;
+  top: 86vh;
+  bottom: 78vh;
   right: 66vw;
-  left: 34vw;
+  left: 39vw;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   z-index: -1000;
@@ -65,10 +65,10 @@
 
 .about .icons > svg:nth-child(2) {
   position: absolute;
-  top: 41vh;
-  bottom: 58vh;
-  right: 24vw;
-  left: 14vw;
+  top: 57vh;
+  bottom: 3vh;
+  right: 7vw;
+  left: 45vw;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   z-index: -1000;
@@ -76,10 +76,10 @@
 
 .about .icons > svg:nth-child(3) {
   position: absolute;
-  top: 88vh;
-  bottom: 85vh;
-  right: 38vw;
-  left: 24vw;
+  top: 87vh;
+  bottom: 8vh;
+  right: 9vw;
+  left: 11vw;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   z-index: -1000;
@@ -87,10 +87,10 @@
 
 .about .icons > svg:nth-child(4) {
   position: absolute;
-  top: 69vh;
-  bottom: 9vh;
-  right: 76vw;
-  left: 41vw;
+  top: 38vh;
+  bottom: 25vh;
+  right: 16vw;
+  left: 40vw;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
   z-index: -1000;
@@ -98,10 +98,10 @@
 
 .about .icons > svg:nth-child(5) {
   position: absolute;
-  top: 60vh;
-  bottom: 63vh;
-  right: 47vw;
-  left: 69vw;
+  top: 36vh;
+  bottom: 23vh;
+  right: 46vw;
+  left: 50vw;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   z-index: -1000;
@@ -109,10 +109,10 @@
 
 .about .icons > svg:nth-child(6) {
   position: absolute;
-  top: 71vh;
-  bottom: 77vh;
-  right: 30vw;
-  left: 21vw;
+  top: 40vh;
+  bottom: 26vh;
+  right: 74vw;
+  left: 18vw;
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
   z-index: -1000;
@@ -396,7 +396,7 @@
     padding-inline: clamp(2em, 10vw, 5em);
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   .about {
     flex-direction: row;
     padding-inline: 2em;
@@ -411,7 +411,7 @@
     left: 50%;
   }
 }
-@media (min-width: 800px) and (hover: hover) {
+@media (min-width: 850px) and (hover: hover) {
   .about .images {
     display: none;
   }
@@ -432,7 +432,7 @@
     display: block;
   }
 }
-@media (min-width: 800px) and (hover: none) {
+@media (min-width: 850px) and (hover: none) {
   .about .images {
     justify-content: center;
     align-items: flex-start;

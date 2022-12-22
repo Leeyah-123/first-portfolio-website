@@ -3,7 +3,7 @@
   flex-direction: column;
   width: calc(100vw - 135px);
   margin-left: 130px;
-  padding-block: 10vh;
+  padding-block: 5vh;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
@@ -89,6 +89,7 @@
   .skills {
     padding-inline: 2em;
     flex-direction: row;
+    padding-block: 10vh;
   }
   .skill-icons {
     display: grid !important;
