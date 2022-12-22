@@ -101,7 +101,7 @@
 
 .about .scroll-icon {
   bottom: 1em;
-  left: 50%;
+  left: 45%;
 
   color: var(--clr-green);
   font-size: 8vh;
@@ -196,6 +196,10 @@ $sentence: (
 
   .about .bio {
     width: 100%;
+  }
+
+  .about .scroll-icon {
+    left: 50%;
   }
 
   @media (hover: hover) {

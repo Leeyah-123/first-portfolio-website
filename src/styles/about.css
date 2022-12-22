@@ -54,10 +54,10 @@
 
 .about .icons > svg:nth-child(1) {
   position: absolute;
-  top: 29vh;
-  bottom: 14vh;
-  right: 63vw;
-  left: 63vw;
+  top: 58vh;
+  bottom: 7vh;
+  right: 66vw;
+  left: 34vw;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   z-index: -1000;
@@ -65,10 +65,10 @@
 
 .about .icons > svg:nth-child(2) {
   position: absolute;
-  top: 7vh;
-  bottom: 60vh;
-  right: 66vw;
-  left: 64vw;
+  top: 41vh;
+  bottom: 58vh;
+  right: 24vw;
+  left: 14vw;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   z-index: -1000;
@@ -76,10 +76,10 @@
 
 .about .icons > svg:nth-child(3) {
   position: absolute;
-  top: 24vh;
-  bottom: 31vh;
-  right: 50vw;
-  left: 8vw;
+  top: 88vh;
+  bottom: 85vh;
+  right: 38vw;
+  left: 24vw;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   z-index: -1000;
@@ -87,10 +87,10 @@
 
 .about .icons > svg:nth-child(4) {
   position: absolute;
-  top: 53vh;
-  bottom: 37vh;
-  right: 26vw;
-  left: 10vw;
+  top: 69vh;
+  bottom: 9vh;
+  right: 76vw;
+  left: 41vw;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
   z-index: -1000;
@@ -98,10 +98,10 @@
 
 .about .icons > svg:nth-child(5) {
   position: absolute;
-  top: 74vh;
-  bottom: 66vh;
-  right: 23vw;
-  left: 12vw;
+  top: 60vh;
+  bottom: 63vh;
+  right: 47vw;
+  left: 69vw;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   z-index: -1000;
@@ -109,10 +109,10 @@
 
 .about .icons > svg:nth-child(6) {
   position: absolute;
-  top: 58vh;
-  bottom: 85vh;
-  right: 18vw;
-  left: 52vw;
+  top: 71vh;
+  bottom: 77vh;
+  right: 30vw;
+  left: 21vw;
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
   z-index: -1000;
@@ -155,7 +155,7 @@
 
 .about .scroll-icon {
   bottom: 1em;
-  left: 50%;
+  left: 45%;
   color: var(--clr-green);
   font-size: 8vh;
   font-weight: 400;
@@ -406,6 +406,9 @@
   }
   .about .bio {
     width: 100%;
+  }
+  .about .scroll-icon {
+    left: 50%;
   }
 }
 @media (min-width: 800px) and (hover: hover) {
