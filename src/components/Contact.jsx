@@ -38,10 +38,9 @@ function Contact() {
             alt="</p>"
           />
           <a
-            href="mailto:junaidaaliyah260@gmail.com"
-            target="_blank"
-            rel="noreferrer"
+            href="Aaliyah Junaid.pdf"
             className="contact-btn"
+            download="Aaliyah Junaid.pdf"
           >
             Download CV
           </a>
