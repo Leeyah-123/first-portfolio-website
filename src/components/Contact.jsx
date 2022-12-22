@@ -33,7 +33,7 @@ function Contact() {
           </p>
           <img
             className="html-closing-element"
-            style={{ 'margin-bottom': '2em' }}
+            style={{ marginBottom: '2em' }}
             src="./p-close.png"
             alt="</p>"
           />
@@ -46,7 +46,14 @@ function Contact() {
             Download CV
           </a>
         </div>
-        <div className="contact-form">A contact form</div>
+        <div className="contact-form-container">
+          <form className="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Message" cols="30" rows="10" required />
+            <button type="submit">submit</button>
+          </form>
+        </div>
       </div>
     </section>
   );

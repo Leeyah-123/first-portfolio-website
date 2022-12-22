@@ -3,24 +3,24 @@
   flex-direction: column;
   width: calc(100vw - 135px);
   height: 100vh;
-  margin-left: 135px;
+  margin-left: 130px;
   padding-block: 20vh;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
 
-.important {
+.about .important {
   color: var(--clr-green);
   font-family: "Herbarium";
   font-weight: bold;
   font-style: normal;
 }
 
-.name-container {
+.about .name-container {
   width: 100%;
 }
 
-.name {
+.about .name {
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
   font-size: clamp(2rem, 5vw, 7rem);
@@ -28,7 +28,7 @@
   margin-bottom: 0;
 }
 
-.subscript {
+.about .subscript {
   font-size: clamp(0.6rem, 1vw, 3rem);
   color: var(--clr-text-tertiary);
   font-family: cursive;
@@ -36,7 +36,7 @@
   margin-top: 1em;
 }
 
-.bio {
+.about .bio {
   font-size: clamp(0.6rem, 1.3vw, 3rem);
   color: var(--clr-text-secondary);
   margin-top: 1em;
@@ -44,7 +44,7 @@
   width: clamp(30em, 55vw, 40em);
 }
 
-.icons > svg {
+.about .icons > svg {
   opacity: 0;
   -webkit-animation: fade-in 300ms ease-out forwards;
           animation: fade-in 300ms ease-out forwards;
@@ -52,97 +52,97 @@
   font-size: clamp(3rem, 4vw, 6rem);
 }
 
-.icons > svg:nth-child(1) {
+.about .icons > svg:nth-child(1) {
   position: absolute;
-  top: 77vh;
-  bottom: 1vh;
-  right: 46vw;
-  left: 79vw;
+  top: 29vh;
+  bottom: 14vh;
+  right: 63vw;
+  left: 63vw;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   z-index: -1000;
 }
 
-.icons > svg:nth-child(2) {
+.about .icons > svg:nth-child(2) {
   position: absolute;
-  top: 19vh;
-  bottom: 29vh;
-  right: 68vw;
-  left: 32vw;
+  top: 7vh;
+  bottom: 60vh;
+  right: 66vw;
+  left: 64vw;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   z-index: -1000;
 }
 
-.icons > svg:nth-child(3) {
+.about .icons > svg:nth-child(3) {
   position: absolute;
-  top: 29vh;
-  bottom: 30vh;
-  right: 20vw;
-  left: 73vw;
+  top: 24vh;
+  bottom: 31vh;
+  right: 50vw;
+  left: 8vw;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   z-index: -1000;
 }
 
-.icons > svg:nth-child(4) {
+.about .icons > svg:nth-child(4) {
   position: absolute;
-  top: 31vh;
-  bottom: 33vh;
-  right: 38vw;
-  left: 61vw;
+  top: 53vh;
+  bottom: 37vh;
+  right: 26vw;
+  left: 10vw;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
   z-index: -1000;
 }
 
-.icons > svg:nth-child(5) {
+.about .icons > svg:nth-child(5) {
   position: absolute;
-  top: 30vh;
-  bottom: 12vh;
-  right: 1vw;
-  left: 58vw;
+  top: 74vh;
+  bottom: 66vh;
+  right: 23vw;
+  left: 12vw;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   z-index: -1000;
 }
 
-.icons > svg:nth-child(6) {
+.about .icons > svg:nth-child(6) {
   position: absolute;
-  top: 87vh;
-  bottom: 67vh;
-  right: 67vw;
-  left: 13vw;
+  top: 58vh;
+  bottom: 85vh;
+  right: 18vw;
+  left: 52vw;
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
   z-index: -1000;
 }
 
-.images {
+.about .images {
   display: flex;
   width: 100%;
   justify-content: flex-start;
   padding-left: 0;
 }
 
-.first-image {
+.about .first-image {
   width: 50%;
 }
 
-.hover-text,
-.scroll-icon {
+.about .hover-text,
+.about .scroll-icon {
   position: absolute;
   color: var(--clr-text-tertiary);
 }
 
-.hover-text {
+.about .hover-text {
   top: 30%;
   right: 10em;
   transform: rotateZ(6deg);
   display: none;
 }
 
-.hover-text::before {
+.about .hover-text::before {
   content: "";
   position: absolute;
   right: 0;
@@ -153,9 +153,9 @@
           animation: write-text 5s step-end forwards;
 }
 
-.scroll-icon {
+.about .scroll-icon {
   bottom: 1em;
-  right: 1em;
+  left: 50%;
   color: var(--clr-green);
   font-size: 8vh;
   font-weight: 400;
@@ -404,44 +404,41 @@
   .images {
     width: auto;
   }
-  .bio {
+  .about .bio {
     width: 100%;
-  }
-  .scroll-icon {
-    left: 50%;
   }
 }
 @media (min-width: 800px) and (hover: hover) {
-  .first-image {
+  .about .images {
     display: none;
   }
-  .letter-name {
+  .about .letter-name {
     position: relative;
   }
-  .letter-name:hover::before {
+  .about .letter-name:hover::before {
     content: url(../../public/placeholder-small.svg);
     pointer-events: none;
     position: absolute;
     top: -15vw;
     z-index: -20;
   }
-  .bio-container {
+  .about .bio-container {
     width: clamp(30em, 60vw, 70%);
   }
-  .hover-text {
+  .about .hover-text {
     display: block;
   }
 }
 @media (min-width: 800px) and (hover: none) {
-  .images {
+  .about .images {
     justify-content: center;
     align-items: flex-start;
   }
-  .first-image {
+  .about .first-image {
     width: 100% !important;
     aspect-ratio: 1;
   }
-  .bio-container {
+  .about .bio-container {
     width: clamp(30em, 50vw, 90%);
   }
 }/*# sourceMappingURL=about.css.map */

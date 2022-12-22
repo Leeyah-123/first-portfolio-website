@@ -8,31 +8,31 @@
   width: calc(100vw - 135px);
   min-height: 50vh;
   padding-block: 10vh;
-  margin-left: 135px;
+  margin-left: 130px;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
 
-.text-container {
+.contact .text-container {
   width: 100%;
 }
 
-.heading {
+.contact .heading {
   font-family: 'Playfair Display', sans-serif;
   font-weight: 400;
   font-size: clamp(2rem, 5vw, 7rem);
   line-height: 0.8em;
 }
 
-.heading > span {
+.contact .heading > span {
   transition: color 400ms ease-out;
 }
 
-.heading > span:hover {
+.contact .heading > span:hover {
   color: var(--clr-green);
 }
 
-.subheading {
+.contact .subheading {
   color: var(--clr-text-secondary);
   font-size: clamp(0.6rem, 1.3vw, 3rem);
   width: 100%;
@@ -40,33 +40,74 @@
   transition: color 0.5s ease-out;
 }
 
-.subheading > a {
+.contact .subheading > a {
   color: var(--clr-green);
 }
 
-.subheading > a:hover,
-.subheading > a:focus {
+.contact .subheading > a:hover,
+.contact .subheading > a:focus {
   opacity: 0.6;
 }
 
-.contact-btn {
-  color: var(--clr-text-primary);
+.contact .contact-btn {
+  color: var(--clr-text-secondary);
   text-transform: uppercase;
   background: var(--clr-bg-light);
-  border: 0.2em solid var(--clr-green);
+  border: 0.1em solid var(--clr-green);
   padding: 0.5em 1.25em;
   transition: all 300ms ease-out;
   margin-top: 2em;
   border-radius: 0.2em;
-  font-size: clamp(0.6rem, 1.3vw, 3rem);
+  font-size: clamp(0.6rem, 1vw, 1.5rem);
 }
 
 .contact-btn:hover {
+  color: var(--clr-bg-dark);
   background: var(--clr-green);
+}
+
+.contact-form-container {
+  width: 100%;
+  height: 100%;
 }
 
 .contact-form {
   width: 100%;
+  height: 100%;
+  display: flex;
+  padding-block: 1em;
+  padding-inline: 5%;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.contact-form > *:not(button) {
+  width: 100%;
+  color: var(--clr-text-primary);
+  background-color: var(--clr-bg-light);
+  padding: 1em;
+  border-radius: 0.2em;
+  font-size: clamp(0.6rem, 1vw, 2rem);
+}
+
+.contact-form > button {
+  color: var(--clr-text-secondary);
+  text-transform: uppercase;
+  background: var(--clr-bg-light);
+  border: 0.1em solid var(--clr-green);
+  padding: 0.5em 1.25em;
+  transition: all 300ms ease-out;
+  margin-top: 2em;
+  border-radius: 0.2em;
+  font-size: clamp(0.6rem, 1vw, 1.5rem);
+  width: fit-content;
+  align-self: center;
+}
+
+.contact-form > button:hover {
+  color: var(--clr-bg-dark);
+  background: var(--clr-green);
 }
 
 .green-text {

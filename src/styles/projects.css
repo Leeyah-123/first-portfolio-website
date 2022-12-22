@@ -3,13 +3,13 @@
   flex-direction: column;
   width: calc(100vw - 135px);
   min-height: 100vh;
-  margin-left: 135px;
+  margin-left: 130px;
   padding-block: 10vh;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
 
-.gallery {
+.projects .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
@@ -18,39 +18,39 @@
   width: 100%;
 }
 
-.gallery > * {
+.projects .gallery > * {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
 
-.heading {
+.projects .heading {
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
   font-size: clamp(2rem, 5vw, 7rem);
   line-height: 0.8em;
 }
 
-.heading > span {
+.projects .heading > span {
   transition: color 400ms ease-out;
 }
 
-.heading > span:hover {
+.projects .heading > span:hover {
   color: var(--clr-green);
 }
 
-.subheading {
+.projects .subheading {
   color: var(--clr-text-secondary);
   font-size: clamp(0.6rem, 1.3vw, 3rem);
   width: clamp(50%, 50vw, 70%);
 }
 
-.subheading > a {
+.projects .subheading > a {
   color: var(--clr-green);
 }
 
-.subheading > a:hover,
-.subheading > a:focus {
+.projects .subheading > a:hover,
+.projects .subheading > a:focus {
   opacity: 0.6;
 }
 

@@ -5,52 +5,52 @@
   position: relative;
   flex-direction: column;
   width: calc(100vw - 135px);
-  margin-left: 135px;
+  margin-left: 130px;
   padding-block: 10vh;
   padding-inline: clamp(3rem, 4vw, 5rem);
   gap: 2rem;
 }
 
-.text-container {
+.skills .text-container {
   width: clamp(18em, 50vw, 70%);
 }
 
-.subheading {
+.skills .subheading {
   color: var(--clr-text-secondary);
   font-size: clamp(0.6rem, 1.3vw, 3rem);
   width: 100%;
   transition: color 0.5s ease-out;
 }
 
-.subheading > a {
+.skills .subheading > a {
   color: var(--clr-green);
 }
 
-.subheading > a:hover,
-.subheading > a:focus {
+.skills .subheading > a:hover,
+.skills .subheading > a:focus {
   opacity: 0.6;
 }
 
-.heading {
+.skills .heading {
   font-family: 'Playfair Display', sans-serif;
   font-weight: 400;
   font-size: clamp(2rem, 5vw, 7rem);
   line-height: 0.8em;
 }
 
-.heading > span {
+.skills .heading > span {
   transition: color 400ms ease-out;
 }
 
-.heading > span:hover {
+.skills .heading > span:hover {
   color: var(--clr-green);
 }
 
-.green-text {
+.skills .green-text {
   color: var(--clr-green);
 }
 
-.stack {
+.skills .stack {
   list-style: none;
   counter-set: stack-counter 0;
   display: grid;
@@ -58,13 +58,13 @@
   font-size: clamp(0.5rem, 1vw, 3rem);
 }
 
-.stack li {
+.skills .stack li {
   color: var(--clr-text-secondary);
   counter-increment: stack-counter 1;
   margin-block: 0.2em;
 }
 
-.stack li::before {
+.skills .stack li::before {
   content: counter(stack-counter) ')';
   margin-right: 1em;
   color: var(--clr-green);
@@ -72,11 +72,11 @@
   border-radius: 50%;
 }
 
-.skill-icons {
+.skills .skill-icons {
   display: none;
 }
 
-.skill-icons > * {
+.skills .skill-icons > * {
   color: var(--clr-text-secondary);
   font-size: clamp(5rem, 7vw, 6rem);
 }
