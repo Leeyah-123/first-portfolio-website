@@ -91,8 +91,8 @@
     flex-direction: row;
   }
   .skill-icons {
+    display: grid !important;
     height: 100%;
-    display: grid;
     padding: 9em;
     gap: 1.5em;
     grid-template-columns: repeat(3, minmax(20px, 1fr));

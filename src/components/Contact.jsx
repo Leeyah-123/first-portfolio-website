@@ -5,7 +5,7 @@ import '../styles/contact.css';
 function Contact() {
   return (
     <section id="contact">
-      <div className="contact flex">
+      <div className="contact">
         <div className="text-container">
           <img className="html-open-element" src="./h2.png" alt="<h2>" />
           <h1 className="heading">
