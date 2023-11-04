@@ -71,21 +71,25 @@ function Header() {
         <ul className="social">
           <li>
             <a href="https://www.linkedin.com/in/aaliyah-junaid-b541aa233">
+              <span className="sr-only">LinkedIn</span>
               <FaLinkedin className="social-logo" />
             </a>
           </li>
           <li>
             <a href="https://github.com/Leeyah-123">
+              <span className="sr-only">Github</span>
               <FaGithub className="social-logo" />
             </a>
           </li>
           <li>
             <a href="https://twitter.com/JunaidAaliyah">
+              <span className="sr-only">Twitter</span>
               <FaTwitter className="social-logo" />
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/lee_yah_260">
+              <span className="sr-only">Instagram</span>
               <FaInstagram className="social-logo" />
             </a>
           </li>
