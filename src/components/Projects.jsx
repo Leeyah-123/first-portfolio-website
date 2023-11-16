@@ -58,21 +58,16 @@ function Projects() {
           {projects.length > 0 ? (
             projects.map((project) => {
               return (
-                <div className="project" key={project.project_id}>
+                <div className="project" key={project.id}>
                   <img
-                    src={project.project_image_url}
-                    alt={project.project_title}
+                    src={project.imageUrl}
+                    alt={project.imageAlt}
                     className="project-image"
                   />
                   <div className="project-description">
-                    <h3 className="project-title">{project.project_title}</h3>
-                    <p className="project-short-desc">
-                      {project.project_subtitle}
-                    </p>
-                    <a
-                      href={project.project_github_link}
-                      className="project-demo-button"
-                    >
+                    <h3 className="project-title">{project.title}</h3>
+                    <p className="project-short-desc">{project.subtitle}</p>
+                    <a href={project.githubUrl} className="project-demo-button">
                       <MdOutlineOpenInNew />
                     </a>
                   </div>
